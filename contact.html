@@ -1,0 +1,3589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | ESMAEL Digital Intelligence</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+
+<style>
+
+  
+:root{
+
+--cyan:#00ffff;
+--pink:#ff0080;
+--purple:#9900ff;
+--dark:#020208;
+
+--glass:rgba(255,255,255,.08);
+--border:rgba(255,255,255,.2);
+
+}
+
+
+
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+
+}
+
+/* =========================
+BACKGROUND
+========================= */
+
+
+.bg-animation{
+
+position:fixed;
+
+inset:0;
+
+background:
+
+linear-gradient(
+45deg,
+#ff0080,
+#00ffff,
+#bf00ff,
+#111
+);
+
+background-size:700% 700%;
+
+animation:gradient 15s infinite;
+
+opacity:.25;
+
+z-index:-5;
+
+}
+
+
+
+@keyframes gradient{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
+body{
+
+background:var(--dark);
+color:white;
+overflow-x:hidden;
+
+}
+
+
+/* =========================
+ FUTURE SPACE
+========================= */
+
+
+.space{
+
+position:fixed;
+inset:0;
+z-index:-2;
+overflow:hidden;
+
+}
+
+
+.orb{
+
+position:absolute;
+
+width:700px;
+height:700px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+circle,
+rgba(0,255,255,.3),
+transparent 65%
+);
+
+
+top:-300px;
+left:-200px;
+
+animation:move 15s infinite alternate;
+
+}
+
+
+
+@keyframes move{
+
+to{
+
+transform:translate(700px,500px);
+
+}
+
+}
+
+
+
+
+.grid{
+
+position:absolute;
+inset:0;
+
+
+background-image:
+
+linear-gradient(
+rgba(0,255,255,.08) 1px,
+transparent 1px
+),
+
+linear-gradient(
+90deg,
+rgba(255,0,128,.08) 1px,
+transparent 1px
+);
+
+
+background-size:80px 80px;
+
+
+transform:
+
+perspective(600px)
+rotateX(65deg)
+translateY(200px);
+
+
+}
+
+
+
+
+/* =========================
+ NAVBAR
+========================= */
+
+
+header{
+
+position:fixed;
+
+top:25px;
+
+left:5%;
+
+width:90%;
+
+
+padding:20px 35px;
+
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(25px);
+
+
+border:1px solid var(--border);
+
+border-radius:50px;
+
+
+z-index:1000;
+
+
+}
+
+
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+
+
+.logo{
+
+font-size:40px;
+
+font-weight:900;
+
+
+background:
+
+linear-gradient(
+45deg,
+cyan,
+pink
+);
+
+
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+nav ul{
+
+display:flex;
+
+gap:30px;
+
+list-style:none;
+
+}
+
+
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:700;
+
+transition:.4s;
+
+}
+
+
+nav a:hover{
+
+color:cyan;
+
+}
+
+
+
+.mode{
+
+padding:12px 25px;
+
+border:none;
+
+border-radius:50px;
+
+background:
+
+linear-gradient(
+45deg,
+cyan,
+purple
+);
+
+color:white;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+
+
+
+/* =========================
+ CONTACT HERO
+========================= */
+
+
+.contact-hero{
+
+min-height:84vh;
+
+padding:200px 8% 80px;
+
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:80px;
+
+}
+
+
+
+
+.contact-text{
+
+max-width:700px;
+
+}
+
+
+
+.tag{
+
+display:inline-block;
+
+padding:12px 25px;
+
+border-radius:50px;
+
+border:1px solid cyan;
+
+color:cyan;
+
+background:rgba(0,255,255,.1);
+
+margin-bottom:30px;
+
+}
+
+
+
+.contact-text h1{
+
+font-size:100px;
+
+font-weight:900;
+
+
+background:
+
+linear-gradient(
+45deg,
+cyan,
+pink,
+purple
+);
+
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+
+}
+
+
+
+.contact-text h2{
+
+font-size:35px;
+
+margin-top:20px;
+
+}
+
+
+
+.contact-text p{
+
+font-size:22px;
+
+line-height:1.8;
+
+color:#aaa;
+
+margin-top:25px;
+
+}
+
+/* =========================
+   HOLOGRAM CONTACT CHAMBER
+========================= */
+
+
+.contact-core{
+
+width:550px;
+
+position:relative;
+
+padding:50px;
+
+
+background:
+
+rgba(255,255,255,.08);
+
+
+border:
+
+1px solid rgba(0,255,255,.4);
+
+
+backdrop-filter:blur(30px);
+
+
+border-radius:45px;
+
+
+box-shadow:
+
+0 0 80px rgba(0,255,255,.25);
+
+
+animation:
+
+floating 6s ease-in-out infinite;
+
+
+}
+
+
+
+
+@keyframes floating{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+}
+
+
+
+
+/* ENERGY RINGS */
+
+
+.contact-core::before{
+
+content:"";
+
+position:absolute;
+
+inset:-20px;
+
+
+border-radius:60px;
+
+
+border:2px solid rgba(0,255,255,.4);
+
+
+animation:
+
+pulse 4s infinite;
+
+
+}
+
+
+@keyframes pulse{
+
+
+0%{
+
+transform:scale(.95);
+
+opacity:.4;
+
+}
+
+
+50%{
+
+transform:scale(1.05);
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:scale(.95);
+
+opacity:.4;
+
+}
+
+
+}
+
+
+
+
+
+.contact-core h2{
+
+
+text-align:center;
+
+font-size:35px;
+
+margin-bottom:30px;
+
+
+background:
+
+linear-gradient(
+45deg,
+cyan,
+pink
+);
+
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+
+}
+
+
+
+
+/* INPUT SYSTEM */
+
+
+.field{
+
+
+position:relative;
+
+margin-bottom:25px;
+
+
+}
+
+
+
+.field input,
+.field textarea{
+
+
+width:100%;
+
+
+padding:18px 20px;
+
+
+background:
+
+rgba(0,0,0,.5);
+
+
+border:
+
+1px solid rgba(0,255,255,.4);
+
+
+border-radius:20px;
+
+
+outline:none;
+
+
+color:white;
+
+
+font-size:16px;
+
+
+transition:.4s;
+
+
+}
+
+
+
+.field textarea{
+
+height:150px;
+
+resize:none;
+
+}
+
+
+
+.field input:focus,
+.field textarea:focus{
+
+
+border-color:#ff0080;
+
+
+box-shadow:
+
+0 0 30px rgba(255,0,128,.6);
+
+
+transform:
+
+translateY(-5px);
+
+
+}
+
+
+
+
+.field label{
+
+
+position:absolute;
+
+
+left:20px;
+
+top:18px;
+
+
+color:#aaa;
+
+
+pointer-events:none;
+
+
+transition:.4s;
+
+
+}
+
+
+
+.field input:focus~label,
+.field input:valid~label,
+.field textarea:focus~label,
+.field textarea:valid~label{
+
+
+top:-12px;
+
+
+font-size:13px;
+
+
+color:cyan;
+
+
+background:#020208;
+
+
+padding:0 10px;
+
+
+}
+
+
+
+
+
+/* TRANSMISSION BUTTON */
+
+
+.transmit{
+
+
+width:100%;
+
+
+padding:20px;
+
+
+border:none;
+
+
+border-radius:50px;
+
+
+font-size:20px;
+
+
+font-weight:900;
+
+
+cursor:pointer;
+
+
+color:white;
+
+
+background:
+
+
+linear-gradient(
+45deg,
+cyan,
+purple,
+pink
+);
+
+
+
+transition:.5s;
+
+
+position:relative;
+
+
+overflow:hidden;
+
+
+}
+
+
+
+.transmit:hover{
+
+
+transform:
+
+scale(1.05);
+
+
+box-shadow:
+
+0 0 60px cyan;
+
+
+}
+
+
+
+
+
+.transmit::after{
+
+
+content:"";
+
+
+position:absolute;
+
+
+width:100%;
+
+height:100%;
+
+
+top:0;
+
+left:-100%;
+
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.6),
+transparent
+);
+
+
+
+transition:.5s;
+
+
+}
+
+
+
+.transmit:hover::after{
+
+
+left:100%;
+
+
+}
+
+
+
+
+
+/* CONTACT HERO LAYOUT UPDATE */
+
+
+.contact-hero{
+
+
+display:flex;
+
+}
+
+
+
+.contact-info{
+
+
+margin-top:40px;
+
+
+display:flex;
+
+gap:20px;
+
+
+}
+
+
+
+.info-box{
+
+
+padding:20px;
+
+
+border-radius:25px;
+
+
+background:
+
+rgba(255,255,255,.08);
+
+
+border:
+
+1px solid rgba(0,255,255,.2);
+
+
+backdrop-filter:blur(20px);
+
+
+}
+
+
+
+.info-box h3{
+
+color:cyan;
+
+margin-bottom:10px;
+
+}
+
+
+.info-box p{
+
+color:#aaa;
+
+font-size:14px;
+
+}
+
+
+
+.stars i{
+
+position:absolute;
+
+width:3px;
+height:3px;
+
+background:white;
+
+border-radius:50%;
+
+}
+
+/* =========================
+   ISMEX FUTURE FOOTER
+========================= */
+
+
+.future-footer{
+
+
+margin-top:120px;
+
+padding:100px 8% 50px;
+
+
+background:
+
+rgba(255,255,255,.05);
+
+
+border-top:
+
+1px solid rgba(0,255,255,.2);
+
+
+backdrop-filter:blur(30px);
+
+
+text-align:center;
+
+
+position:relative;
+
+
+overflow:hidden;
+
+
+}
+
+
+
+/* ENERGY LIGHT */
+
+
+.future-footer::before{
+
+
+content:"";
+
+
+position:absolute;
+
+
+top:0;
+
+left:-100%;
+
+
+width:200%;
+
+height:3px;
+
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+cyan,
+pink,
+purple,
+transparent
+);
+
+
+
+animation:
+
+footerLine 5s linear infinite;
+
+
+}
+
+
+
+@keyframes footerLine{
+
+
+to{
+
+left:100%;
+
+}
+
+
+}
+
+
+
+
+.footer-logo{
+
+
+font-size:120px;
+
+
+font-weight:900;
+
+
+letter-spacing:10px;
+
+
+
+background:
+
+linear-gradient(
+45deg,
+cyan,
+pink,
+purple
+);
+
+
+
+-webkit-background-clip:text;
+
+
+color:transparent;
+
+
+
+text-shadow:
+
+0 0 60px rgba(0,255,255,.4);
+
+
+}
+
+
+
+
+
+.future-footer h2{
+
+
+font-size:40px;
+
+margin:30px 0;
+
+
+}
+
+
+
+.future-footer p{
+
+
+max-width:900px;
+
+margin:auto;
+
+
+font-size:22px;
+
+
+line-height:1.8;
+
+
+color:#aaa;
+
+
+}
+
+
+
+
+.footer-services{
+
+
+display:grid;
+
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+
+
+gap:30px;
+
+
+margin:80px 0;
+
+
+}
+
+
+
+
+
+.footer-card{
+
+
+padding:35px;
+
+
+border-radius:35px;
+
+
+
+background:
+
+rgba(255,255,255,.08);
+
+
+
+border:
+
+1px solid rgba(0,255,255,.2);
+
+
+
+transition:.5s;
+
+
+
+}
+
+
+
+
+
+.footer-card:hover{
+
+
+transform:
+
+translateY(-15px);
+
+
+box-shadow:
+
+0 0 50px cyan;
+
+
+}
+
+
+
+
+.footer-card h3{
+
+
+color:cyan;
+
+
+font-size:25px;
+
+
+margin-bottom:15px;
+
+
+}
+
+
+
+
+.footer-card span{
+
+
+font-size:50px;
+
+
+}
+
+
+
+
+
+.footer-links{
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+gap:35px;
+
+
+margin:50px 0;
+
+
+flex-wrap:wrap;
+
+
+}
+
+
+
+
+
+.footer-links a{
+
+
+color:white;
+
+
+text-decoration:none;
+
+
+font-weight:bold;
+
+
+transition:.4s;
+
+
+}
+
+
+
+.footer-links a:hover{
+
+
+color:cyan;
+
+
+}
+
+
+
+
+.social-core{
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+gap:25px;
+
+
+}
+
+
+
+
+
+.social-core a{
+
+
+width:70px;
+
+height:70px;
+
+
+display:flex;
+
+
+align-items:center;
+
+justify-content:center;
+
+
+border-radius:50%;
+
+
+
+background:
+
+rgba(255,255,255,.08);
+
+
+
+border:
+
+1px solid cyan;
+
+
+font-size:25px;
+
+
+color:white;
+
+
+text-decoration:none;
+
+
+transition:.5s;
+
+
+}
+
+
+
+.social-core a:hover{
+
+
+background:cyan;
+
+
+color:black;
+
+
+transform:
+
+translateY(-10px)
+rotate(360deg);
+
+
+box-shadow:
+
+0 0 40px cyan;
+
+
+}
+
+
+
+
+
+.copyright{
+
+
+margin-top:60px;
+
+
+color:#777;
+
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+.footer-services{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+.footer-logo{
+
+
+font-size:70px;
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+/* =========================================================
+   ISMEX DESKTOP VIEW ON MOBILE
+   DO NOT CHANGE THE EXISTING DESIGN
+========================================================= */
+
+/*
+   The mobile screen keeps the same desktop-style composition.
+   We only scale the page down so the layout remains visually
+   similar instead of stacking everything vertically.
+*/
+
+@media (max-width: 900px){
+
+    html,
+    body{
+        width:100%;
+        min-width:100%;
+        overflow-x:hidden;
+    }
+
+    /* Keep the main hero in desktop-style horizontal layout */
+    .future-hero{
+        flex-direction:row !important;
+        text-align:left !important;
+        justify-content:space-between !important;
+        align-items:center !important;
+
+        padding-left:5%;
+        padding-right:5%;
+
+        gap:25px;
+    }
+
+    .hero-information{
+        width:58%;
+        max-width:none;
+        flex-shrink:0;
+    }
+
+    .ai-core{
+        width:260px !important;
+        height:260px !important;
+        flex-shrink:0;
+    }
+
+    .future-hero h1{
+        font-size:clamp(38px,8vw,70px);
+    }
+
+    .future-hero h1 span{
+        font-size:clamp(25px,5vw,45px);
+    }
+
+    .future-hero h2{
+        font-size:clamp(20px,4vw,32px);
+        margin-top:30px;
+    }
+
+    .future-hero p{
+        font-size:16px;
+        line-height:1.6;
+    }
+
+    .future-actions{
+        justify-content:flex-start !important;
+    }
+
+    .future-actions a{
+        padding:14px 25px;
+        font-size:13px;
+    }
+
+
+    /* Keep the navigation horizontal */
+    .future-nav{
+        left:3%;
+        width:94%;
+        padding:14px 18px;
+    }
+
+    .future-nav nav{
+        flex-direction:row !important;
+        justify-content:space-between;
+    }
+
+    .future-nav ul{
+        display:flex !important;
+        gap:8px;
+        flex-wrap:nowrap;
+    }
+
+    .future-nav ul li a{
+        padding:8px 10px !important;
+        font-size:9px;
+        white-space:nowrap;
+    }
+
+    .brand{
+        font-size:25px;
+        flex-shrink:0;
+    }
+
+
+    /* Desktop-style 3-column cards on phone */
+    .system-grid,
+    .project-grid,
+    .future-gallery{
+        grid-template-columns:repeat(3,1fr) !important;
+        gap:10px;
+    }
+
+    .holo-card,
+    .project-holo{
+        padding:15px;
+        border-radius:20px;
+    }
+
+    .holo-card h3,
+    .project-holo h3{
+        font-size:13px;
+    }
+
+    .holo-card p,
+    .project-holo p{
+        font-size:10px;
+        line-height:1.4;
+    }
+
+    .card-icon{
+        font-size:25px;
+    }
+
+
+    /* Gallery stays in desktop-style rows */
+    .gallery{
+        display:grid !important;
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+        padding:15px;
+    }
+
+    .gallery div{
+        width:100% !important;
+        height:auto !important;
+        min-height:280px;
+        padding:7px;
+    }
+
+    .gallery img{
+        height:190px !important;
+        object-fit:cover;
+    }
+
+    .gallery p{
+        font-size:10px;
+    }
+
+    .gallery strong{
+        font-size:13px !important;
+    }
+
+
+    /* Section spacing */
+    .future-section{
+        padding:70px 5%;
+    }
+
+    .section-title{
+        margin-bottom:35px;
+    }
+
+    .section-title p{
+        font-size:10px;
+        letter-spacing:3px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+
+    /* Contact */
+    .contact-future{
+        margin:50px 5%;
+        padding:50px 20px;
+    }
+
+    .contact-future h2{
+        font-size:32px;
+    }
+
+
+    /* Footer keeps the multi-column desktop feeling */
+    .footer-content{
+        grid-template-columns:repeat(2,1fr);
+        gap:25px;
+    }
+
+    .footer-column h3{
+        font-size:15px;
+    }
+
+    .footer-column p,
+    .footer-column li,
+    .footer-column a{
+        font-size:11px;
+    }
+
+    .footer-logo{
+        font-size:55px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL ANDROID PHONES
+========================================================= */
+
+@media (max-width:500px){
+
+    .future-nav{
+        top:12px;
+        padding:10px 12px;
+    }
+
+    .brand{
+        font-size:20px;
+    }
+
+    .future-nav ul{
+        gap:4px;
+    }
+
+    .future-nav ul li a{
+        padding:6px 7px !important;
+        font-size:7px;
+    }
+
+
+    .hero-luxury{
+        min-height:70vh;
+        padding:0 15px;
+    }
+
+    .hero-content h1{
+        font-size:clamp(45px,15vw,75px);
+    }
+
+    .hero-content p{
+        font-size:16px !important;
+    }
+
+
+    .future-hero{
+        min-height:80vh;
+        padding:50px 4% 60px;
+        gap:10px;
+    }
+
+    .hero-information{
+        width:58%;
+    }
+
+    .ai-core{
+        width:145px !important;
+        height:145px !important;
+    }
+
+    .hologram-card{
+        width:105px;
+        padding:14px;
+    }
+
+    .avatar-core{
+        width:45px;
+        height:50px;
+        font-size:18px;
+    }
+
+    .hologram-card h3{
+        font-size:13px;
+    }
+
+    .hologram-card p{
+        font-size:8px;
+    }
+
+    .status{
+        padding:6px 10px;
+        font-size:8px;
+        margin-bottom:15px;
+    }
+
+    .future-hero h1{
+        font-size:30px;
+    }
+
+    .future-hero h1 span{
+        font-size:20px;
+    }
+
+    .future-hero h2{
+        font-size:15px;
+        margin-top:20px;
+    }
+
+    .future-hero p{
+        font-size:10px;
+        line-height:1.5;
+    }
+
+    .future-actions{
+        gap:6px;
+        margin-top:20px;
+    }
+
+    .future-actions a{
+        padding:9px 12px;
+        font-size:8px;
+    }
+
+
+    /* 3-column system layout remains */
+    .system-grid,
+    .project-grid{
+        grid-template-columns:repeat(3,1fr) !important;
+        gap:6px;
+    }
+
+    .holo-card,
+    .project-holo{
+        padding:8px;
+        border-radius:12px;
+    }
+
+    .card-icon{
+        font-size:18px;
+    }
+
+    .holo-card h3,
+    .project-holo h3{
+        font-size:8px;
+        margin:8px 0;
+    }
+
+    .holo-card p,
+    .project-holo p{
+        font-size:6px;
+    }
+
+
+    /* Gallery */
+    .gallery{
+        grid-template-columns:repeat(2,1fr) !important;
+        gap:8px;
+    }
+
+    .gallery div{
+        min-height:210px;
+    }
+
+    .gallery img{
+        height:130px !important;
+    }
+
+    .gallery p{
+        font-size:7px;
+    }
+
+    .gallery strong{
+        font-size:9px !important;
+    }
+
+
+    /* Footer */
+    .footer-content{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+    footer{
+        padding:30px 12px;
+    }
+
+    .footer-logo{
+        font-size:45px;
+    }
+
+}
+
+
+/* =========================================================
+   FLOATING ISMEX AI + TELEGRAM BUTTONS
+========================================================= */
+
+.ismex-floating-tools{
+
+    position:fixed;
+
+    right:22px;
+    bottom:22px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:12px;
+
+    z-index:999999;
+
+}
+
+
+/* Common circle */
+
+.ismex-float-btn{
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:900;
+
+    border:1px solid rgba(255,255,255,.35);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    transition:.3s;
+
+    box-shadow:
+        0 0 20px rgba(0,255,255,.35);
+
+}
+
+
+/* AI button */
+
+.ismex-ai-btn{
+
+    background:
+        linear-gradient(
+            135deg,
+            #00ffff,
+            #0066ff,
+            #bf00ff
+        );
+
+    font-size:40px;
+
+    animation:ismexAIPulse 2s infinite;
+
+}
+
+
+/* Telegram */
+
+  .telegram-logo {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .telegram-logo svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .telegram-logo:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0 8px 18px rgba(34, 158, 217, 0.5));
+    }
+    
+    
+    
+    
+    /* =========================================================
+   TELEGRAM MOBILE SIZE FIX
+========================================================= */
+
+@media (max-width:500px){
+
+    .ismex-floating-tools .telegram-logo{
+        width:45px !important;
+        height:45px !important;
+        flex-shrink:0;
+    }
+
+    .ismex-floating-tools .telegram-logo svg{
+        width:45px !important;
+        height:45px !important;
+    }
+
+}
+
+
+/* Hover */
+
+.ismex-float-btn:hover{
+
+    transform:scale(1.12);
+
+    box-shadow:
+        0 0 30px #00ffff;
+
+}
+
+
+/* AI pulse */
+
+@keyframes ismexAIPulse{
+
+    0%,100%{
+
+        box-shadow:
+        0 0 15px rgba(0,255,255,.4);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 35px rgba(0,255,255,.9),
+        0 0 60px rgba(191,0,255,.5);
+
+    }
+
+}
+
+
+/* Android size */
+
+@media(max-width:500px){
+
+    .ismex-floating-tools{
+
+        right:12px;
+        bottom:15px;
+
+        gap:8px;
+
+    }
+
+    .ismex-float-btn{
+
+        width:45px;
+        height:45px;
+
+    }
+
+    .ismex-ai-btn{
+
+        font-size:13px;
+
+    }
+
+    .ismex-telegram-btn{
+
+        font-size:19px;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   ISMEX — CONTACT PAGE
+   MOBILE 3D GLASS MENU
+========================================================= */
+
+/* Hidden on desktop */
+.mobile-menu-btn{
+    display:none;
+}
+
+
+.mobile-3d-menu{
+
+    position:fixed;
+
+    top:78px;
+    right:18px;
+
+    width:210px;
+
+    padding:12px;
+
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.16),
+            rgba(255,255,255,.045)
+        );
+
+    border:1px solid rgba(255,255,255,.20);
+
+    border-radius:22px;
+
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.55),
+        0 0 25px rgba(0,255,255,.12),
+        inset 0 1px 0 rgba(255,255,255,.18);
+
+    z-index:999998;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:
+        perspective(700px)
+        rotateX(-18deg)
+        rotateY(8deg)
+        translateY(-18px)
+        scale(.88);
+
+    transform-origin:top right;
+
+    transition:
+        opacity .3s ease,
+        transform .4s cubic-bezier(.2,.8,.2,1),
+        visibility .3s;
+}
+
+
+/* OPEN */
+
+.mobile-3d-menu.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+        perspective(700px)
+        rotateX(0deg)
+        rotateY(0deg)
+        translateY(0)
+        scale(1);
+}
+
+
+/* MENU ITEMS */
+
+.mobile-3d-menu a{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:13px;
+
+    min-height:52px;
+
+    padding:12px 15px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    border-radius:15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(167,159,159,.25),
+            rgba(0,0,0,.75)
+        );
+
+    border:1px solid rgba(255,255,255,.10);
+
+    box-shadow:
+
+        inset 0 1px 0 rgba(255,255,255,.10),
+
+        0 7px 18px rgba(0,0,0,.25);
+
+    transition:
+
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease,
+        border .25s ease;
+}
+
+
+/* NEON ICON */
+
+.mobile-3d-menu a::first-letter{
+
+    color:#00ffff;
+
+}
+
+
+/* TOUCH / HOVER */
+
+.mobile-3d-menu a:hover{
+
+    transform:
+        translateX(-5px)
+        translateY(-2px)
+        scale(1.02);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,255,255,.18),
+            rgba(191,0,255,.14)
+        );
+
+    border-color:
+        rgba(0,255,255,.35);
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,.35),
+
+        0 0 20px rgba(0,255,255,.14),
+
+        inset 0 1px 0 rgba(255,255,255,.18);
+}
+
+/* =========================================================
+   CONTACT PAGE — MOBILE CONTENT FIX
+   Does NOT change desktop
+========================================================= */
+
+@media (max-width: 900px){
+
+    /* Main contact section */
+    .contact-hero{
+        min-height:auto !important;
+        height:auto !important;
+        padding:
+            110px
+            18px
+            70px !important;
+
+        display:flex !important;
+        flex-direction:column !important;
+        gap:35px !important;
+    }
+
+    /* Left text/content */
+    .contact-text{
+        width:100% !important;
+        max-width:100% !important;
+        padding:0 !important;
+        text-align:center !important;
+    }
+
+    .contact-text h1,
+    .contact-text h2{
+        font-size:clamp(34px, 10vw, 58px) !important;
+        line-height:1.05 !important;
+        word-break:normal !important;
+    }
+
+    .contact-text p{
+        font-size:14px !important;
+        line-height:1.7 !important;
+        max-width:600px !important;
+        margin:15px auto !important;
+    }
+
+    /* Contact 3D core / right side */
+    .contact-core{
+        width:100% !important;
+        max-width:500px !important;
+        margin:0 auto !important;
+        padding:0 !important;
+    }
+
+    /* Contact form */
+    .contact-form{
+        width:100% !important;
+        max-width:100% !important;
+        margin:0 auto !important;
+        padding:22px !important;
+        box-sizing:border-box !important;
+        border-radius:22px !important;
+    }
+
+    /* Form rows */
+    .contact-form form{
+        width:100% !important;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select{
+        width:100% !important;
+        max-width:100% !important;
+        box-sizing:border-box !important;
+        font-size:15px !important;
+        padding:14px 15px !important;
+        border-radius:13px !important;
+    }
+
+    .contact-form textarea{
+        min-height:150px !important;
+        resize:vertical !important;
+    }
+
+    /* Send button */
+    .contact-form button,
+    .contact-form input[type="submit"]{
+        width:100% !important;
+        min-height:52px !important;
+        margin-top:10px !important;
+        font-size:14px !important;
+        border-radius:14px !important;
+        box-sizing:border-box !important;
+    }
+
+    /* Contact information cards */
+    .contact-info{
+        width:100% !important;
+        display:grid !important;
+        grid-template-columns:1fr !important;
+        gap:14px !important;
+    }
+
+    .contact-card{
+        width:100% !important;
+        box-sizing:border-box !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width:500px){
+
+    .contact-hero{
+        padding:
+            95px
+            12px
+            55px !important;
+        gap:25px !important;
+    }
+
+    .contact-text h1,
+    .contact-text h2{
+        font-size:34px !important;
+    }
+
+    .contact-text p{
+        font-size:13px !important;
+        line-height:1.65 !important;
+    }
+
+    .contact-form{
+        padding:17px !important;
+        border-radius:18px !important;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select{
+        font-size:14px !important;
+        padding:13px !important;
+    }
+
+    .contact-form textarea{
+        min-height:130px !important;
+    }
+
+    .contact-form button,
+    .contact-form input[type="submit"]{
+        min-height:50px !important;
+        font-size:13px !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+@media(max-width:900px){
+
+    /* Hide original desktop links */
+    header nav ul{
+        display:none !important;
+    }
+
+
+    /* 3D MENU BUTTON */
+
+    .mobile-menu-btn{
+
+        display:flex;
+
+        width:46px;
+        height:46px;
+
+        margin-left:auto;
+
+        align-items:center;
+        justify-content:center;
+
+        flex-direction:column;
+
+        gap:5px;
+
+        border:
+            1px solid
+            rgba(0, 0, 0, 1);
+
+        border-radius:14px;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(0, 0, 0, 0.53),
+                rgba(0, 0, 0, 0.5)
+            );
+
+        backdrop-filter:blur(18px);
+        -webkit-backdrop-filter:blur(18px);
+
+        box-shadow:
+
+            0 8px 25px rgba(0,0,0,.35),
+
+            0 0 18px rgba(0, 255, 255, 1),
+
+            inset 0 1px 0
+            rgba(255,255,255,.16);
+
+        cursor:pointer;
+
+        position:relative;
+
+        z-index:1000000;
+
+        transition:
+            transform .3s ease,
+            box-shadow .3s ease;
+    }
+
+
+    .mobile-menu-btn span{
+
+        width:21px;
+
+        height:2px;
+
+        border-radius:10px;
+
+        background:white;
+
+        box-shadow:
+            0 0 7px
+            rgba(0,255,255,.8);
+
+        transition:
+            transform .3s ease,
+            opacity .2s ease;
+    }
+
+
+    /* OPEN BUTTON → X */
+
+    .mobile-menu-btn.active{
+
+        transform:
+            perspective(300px)
+            rotateY(-12deg)
+            scale(1.05);
+
+        box-shadow:
+
+            0 10px 30px rgba(0, 0, 0, 0.89),
+
+            0 0 25px rgba(0, 255, 255, 0.17),
+
+            inset 0 1px 0
+            rgba(255, 255, 255, 0.5);
+    }
+
+
+    .mobile-menu-btn.active span:nth-child(1){
+
+        transform:
+            translateY(7px)
+            rotate(45deg);
+    }
+
+
+    .mobile-menu-btn.active span:nth-child(2){
+
+        opacity:0;
+    }
+
+
+    .mobile-menu-btn.active span:nth-child(3){
+
+        transform:
+            translateY(-7px)
+            rotate(-45deg);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL ANDROID PHONES
+========================================================= */
+
+@media(max-width:500px){
+
+    .mobile-menu-btn{
+
+        width:42px;
+        height:42px;
+
+        border-radius:13px;
+    }
+
+
+    .mobile-3d-menu{
+
+        top:70px;
+        right:12px;
+
+        width:195px;
+
+        border-radius:20px;
+
+        padding:10px;
+    }
+
+
+    .mobile-3d-menu a{
+
+        min-height:48px;
+
+        padding:10px 13px;
+
+        font-size:12px;
+    }
+
+}
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="space">
+
+<div class="orb"></div>
+
+<div class="grid"></div>
+
+</div>
+
+<!-- =========================
+     BACKGROUND
+========================= -->
+
+<div class="bg-animation"></div>
+
+<div class="particles"></div>
+
+
+<div class="progress-bar"></div>
+
+
+
+
+
+<header>
+
+<nav>
+
+<div class="logo">
+esmael.
+</div>
+
+
+<ul>
+
+<li><a href="index.html" style="background: linear-gradient(to right,blue,aqua);
+padding: 10px 20px;
+border-radius: 50px;">HOME</a></li>
+
+<li><a href="about.html"  style="background: linear-gradient(to right,blue,aqua);
+padding: 10px 20px;
+border-radius: 50px;">ABOUT</a></li>
+
+
+
+<li><a href="ai.html"  style="background: linear-gradient(to right,blue,aqua);
+padding: 10px 20px;
+border-radius: 50px;">Ai</a></li>
+
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========================================================
+     MOBILE 3D GLASS MENU
+========================================================= -->
+
+<button
+    class="mobile-menu-btn"
+    id="mobileMenuBtn"
+    aria-label="Open menu"
+    type="button"
+>
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+
+<div class="mobile-3d-menu" id="mobile3DMenu">
+
+    <a href="index.html">
+        ⌂ <span>HOME</span>
+    </a>
+
+    <a href="about.html">
+        ◈ <span>ABOUT</span>
+    </a>
+
+
+    <a href="ai.html">
+        ◉ <span>AI</span>
+    </a>
+
+</div>
+
+
+</nav>
+
+</header>
+
+
+
+
+<section class="contact-hero">
+
+
+<div class="contact-text">
+
+
+<div class="tag">
+
+● DIGITAL CONNECTION PORTAL
+
+</div>
+
+
+<h1>
+
+CONTACT
+
+</h1>
+
+
+<h2>
+
+Connect With 
+<span style="color:cyan">
+Ismael Intelligence
+</span>
+
+</h2>
+
+
+<p>
+
+Send your ideas, business projects,
+website requests and digital dreams.
+
+The ISMEX communication system
+is ready to receive your transmission.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="contact-core">
+
+
+<h2>
+SEND ME
+</h2>
+
+
+
+
+<!----FORMspree.io------->
+
+<form action="https://formspree.io/f/xpqjqkzy" method="POST">
+<!-----/FoRMspree.io----->
+
+
+
+
+
+<div class="field">
+
+<input 
+type="text"
+name="name"
+required>
+
+<label>
+Your Name
+</label>
+
+</div>
+
+
+
+
+<div class="field">
+
+<input 
+type="email"
+name="email"
+required>
+
+<label>
+Your Email to reply
+</label>
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<textarea
+name="message"
+required></textarea>
+
+<label>
+Your Message
+</label>
+
+</div>
+
+
+
+<input 
+type="hidden"
+name="_next"
+value="https://ismael-webdeveloper.onrender.com/thank-you.html">
+
+
+
+
+
+<button type="submit" class="transmit">
+    🚀 SEND MESSAGE
+</button>
+
+🚀 SEND MESSAGE 
+
+</button>
+
+
+
+</form>
+
+
+
+<div class="contact-info">
+
+
+<div class="info-box">
+
+<h3>
+🌐 WEB
+</h3>
+
+<p>
+Website Development
+</p>
+
+</div>
+
+
+
+<div class="info-box">
+
+<h3>
+🤖 Ai
+</h3>
+
+<p>
+Future Systems
+</p>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+</section>
+
+
+<footer class="future-footer">
+
+
+<div class="footer-logo">
+
+Esmael
+
+</div>
+
+
+<h2>
+
+Future Digital Connection
+
+</h2>
+
+
+<p>
+
+Building the bridge between human creativity
+and future technology.
+
+ISMEX creates modern websites,
+AI systems, mobile applications,
+e-commerce platforms and digital experiences.
+
+</p>
+
+
+
+<div class="footer-services">
+
+
+<div class="footer-card">
+
+<span>
+🌐
+</span>
+
+<h3>
+WEB SYSTEMS
+</h3>
+
+<p>
+Modern websites and powerful digital platforms.
+</p>
+
+</div>
+
+
+
+
+<div class="footer-card">
+
+<span>
+🤖
+</span>
+
+<h3>
+AI TECHNOLOGY
+</h3>
+
+<p>
+Intelligent systems and automation solutions.
+</p>
+
+</div>
+
+
+
+
+<div class="footer-card">
+
+<span>
+🚀
+</span>
+
+<h3>
+FUTURE APPS
+</h3>
+
+<p>
+Mobile applications and creative experiences.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="footer-links">
+
+
+<a href="index.html">
+HOME
+</a>
+
+
+<a href="about.html">
+ABOUT
+</a>
+
+
+<a href="contact.html">
+CONTACT
+</a>
+
+
+<a href="ai.html">
+Ai
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="social-core">
+
+
+<a>
+GH
+</a>
+
+
+<a href="https://esmael54.t.me/">
+TG
+</a>
+
+
+<a>
+IG
+</a>
+
+
+<a>
+IN
+</a>
+
+
+</div>
+
+
+
+<div class="copyright">
+
+© 2027 ESMAEL DIGITAL INTELLIGENCE
+
+</div>
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+<!-- =========================================================
+     ISMEX FLOATING AI + TELEGRAM
+========================================================= -->
+
+<div class="ismex-floating-tools">
+
+    <!-- AI -->
+    <a
+        href="ai.html"
+        class="ismex-float-btn ismex-ai-btn"
+        aria-label="Open ISMEX AI"
+        title="ISMEX AI"
+    >
+        AI
+    </a>
+
+
+
+
+    <!-- Telegram -->
+       <!-- Telegram -->
+   <a href="https://esmael54.t.me/" class="telegram-logo" aria-label="Telegram">
+    <svg
+      viewBox="0 0 240 240"
+      xmlns="http://www.w3.org/2000/svg">
+
+      <circle
+        cx="120"
+        cy="120"
+        r="120"
+        fill="#229ED9"/>
+
+      <path
+        d="M197.8 67.7L168.2 194.3c-2.2 9.5-7.7 11.9-15.6 7.4l-43-31.7-20.7 19.9c-2.3 2.3-4.2 4.2-8.6 4.2l3.1-43.8 79.8-72.1c3.5-3.1-.8-4.8-5.4-1.7L59.2 136.2l-42.4-13.3c-9.2-2.9-9.4-9.2 1.9-13.6L184.5 51.7c7.6-2.8 14.2 1.8 13.3 16z"
+        fill="#ffffff"/>
+    </svg>
+  </a>
+
+</div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+
+<script>
+
+/* =========================
+   ISMEX 3D GALAXY ENGINE
+========================= */
+
+
+const scene = new THREE.Scene();
+
+
+
+const camera = new THREE.PerspectiveCamera(
+
+75,
+
+window.innerWidth / window.innerHeight,
+
+0.1,
+
+1000
+
+);
+
+
+
+const renderer = new THREE.WebGLRenderer({
+
+alpha:true,
+
+antialias:true
+
+});
+
+
+
+renderer.setSize(
+
+window.innerWidth,
+
+window.innerHeight
+
+);
+
+
+
+renderer.domElement.style.position="fixed";
+
+renderer.domElement.style.top="0";
+
+renderer.domElement.style.left="0";
+
+renderer.domElement.style.zIndex="-3";
+
+
+document.body.appendChild(renderer.domElement);
+
+
+
+
+
+
+/* =========================
+   STAR NETWORK
+========================= */
+
+
+const starGeometry = new THREE.BufferGeometry();
+
+
+const starCount = 9000;
+
+
+const starPositions = new Float32Array(
+
+starCount * 3
+
+);
+
+
+
+for(let i=0;i<starCount*3;i++){
+
+
+starPositions[i]=(Math.random()-0.5)*1000;
+
+
+}
+
+
+
+starGeometry.setAttribute(
+
+"position",
+
+new THREE.BufferAttribute(
+
+starPositions,
+
+3
+
+)
+
+);
+
+
+
+
+
+const starMaterial = new THREE.PointsMaterial({
+
+size:0.8,
+
+color:0xffffff
+
+});
+
+
+
+
+
+const stars = new THREE.Points(
+
+starGeometry,
+
+starMaterial
+
+);
+
+
+
+scene.add(stars);
+
+
+
+
+
+
+
+/* =========================
+   ENERGY CORE PLANET
+========================= */
+
+
+const coreGeometry =
+
+new THREE.SphereGeometry(
+
+2,
+
+64,
+
+64
+
+);
+
+
+
+
+
+const coreMaterial =
+
+new THREE.MeshBasicMaterial({
+
+color:0x00ffff,
+
+wireframe:true
+
+});
+
+
+
+
+
+const core = new THREE.Mesh(
+
+coreGeometry,
+
+coreMaterial
+
+);
+
+
+
+core.position.z=-5;
+
+
+scene.add(core);
+
+
+
+
+
+
+
+/* =========================
+   FLOATING ENERGY RINGS
+========================= */
+
+
+const ringGeometry =
+
+new THREE.TorusGeometry(
+
+3,
+
+0.02,
+
+16,
+
+100
+
+);
+
+
+
+const ringMaterial =
+
+new THREE.MeshBasicMaterial({
+
+color:0xff0080
+
+});
+
+
+
+const ring = new THREE.Mesh(
+
+ringGeometry,
+
+ringMaterial
+
+);
+
+
+
+ring.rotation.x=Math.PI/2;
+
+
+ring.position.z=-5;
+
+
+scene.add(ring);
+
+
+
+
+
+
+
+camera.position.z=5;
+
+
+
+
+
+
+/* =========================
+   MOUSE AI CONTROL
+========================= */
+
+
+let mouseX=0;
+
+let mouseY=0;
+
+
+
+document.addEventListener(
+
+"mousemove",
+
+(e)=>{
+
+
+mouseX =
+
+(e.clientX/window.innerWidth-.5);
+
+
+mouseY =
+
+(e.clientY/window.innerHeight-.5);
+
+
+
+}
+
+);
+
+
+
+
+
+
+
+/* =========================
+   ANIMATION LOOP
+========================= */
+
+
+function animate(){
+
+
+requestAnimationFrame(animate);
+
+
+
+
+
+stars.rotation.y +=0.0008;
+
+
+
+core.rotation.y +=0.01;
+
+
+core.rotation.x +=0.005;
+
+
+
+ring.rotation.z +=0.01;
+
+
+
+
+
+camera.position.x +=
+
+(mouseX*2-camera.position.x)*0.02;
+
+
+
+camera.position.y +=
+
+(-mouseY*2-camera.position.y)*0.02;
+
+
+
+renderer.render(
+
+scene,
+
+camera
+
+);
+
+
+
+}
+
+
+
+animate();
+
+
+
+
+
+
+
+/* =========================
+   RESIZE
+========================= */
+
+
+window.addEventListener(
+
+"resize",
+
+()=>{
+
+
+camera.aspect =
+
+window.innerWidth /
+
+window.innerHeight;
+
+
+
+camera.updateProjectionMatrix();
+
+
+
+renderer.setSize(
+
+window.innerWidth,
+
+window.innerHeight
+
+);
+
+
+
+}
+
+);
+
+
+
+
+
+/* =========================
+ DARK LIGHT MODE
+========================= */
+
+
+const modeButton =
+document.querySelector(".mode");
+
+
+if(modeButton){
+
+
+modeButton.onclick=()=>{
+
+
+document.body.classList.toggle("light");
+
+
+modeButton.innerHTML =
+
+document.body.classList.contains("light")
+
+?
+
+"☀️"
+
+:
+
+"🌙";
+
+
+};
+
+
+}
+
+
+
+
+
+/* =========================================================
+   SHOW FLOATING AI + TELEGRAM AFTER 5 SECONDS
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const floatingTools = document.querySelector(".ismex-floating-tools");
+
+    if (!floatingTools) return;
+
+    /* Hide at first */
+    floatingTools.style.opacity = "0";
+    floatingTools.style.visibility = "hidden";
+    floatingTools.style.transform = "translateY(20px)";
+    floatingTools.style.transition =
+        "opacity .6s ease, transform .6s ease, visibility .6s ease";
+
+    /* Show after 5 seconds */
+    setTimeout(function () {
+
+        floatingTools.style.opacity = "1";
+        floatingTools.style.visibility = "visible";
+        floatingTools.style.transform = "translateY(0)";
+
+    }, 5000);
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   ISMEX — MOBILE 3D GLASS MENU
+========================================================= */
+
+const mobileMenuBtn =
+    document.getElementById("mobileMenuBtn");
+
+const mobile3DMenu =
+    document.getElementById("mobile3DMenu");
+
+
+if(mobileMenuBtn && mobile3DMenu){
+
+    /* OPEN / CLOSE */
+
+    mobileMenuBtn.addEventListener(
+        "click",
+        function(e){
+
+            e.stopPropagation();
+
+            mobileMenuBtn.classList.toggle("active");
+
+            mobile3DMenu.classList.toggle("active");
+
+        }
+    );
+
+
+    /* CLOSE WHEN CLICKING OUTSIDE */
+
+    document.addEventListener(
+        "click",
+        function(e){
+
+            if(
+                !mobile3DMenu.contains(e.target) &&
+                !mobileMenuBtn.contains(e.target)
+            ){
+
+                mobileMenuBtn.classList.remove("active");
+
+                mobile3DMenu.classList.remove("active");
+
+            }
+
+        }
+    );
+
+
+    /* CLOSE AFTER SELECTING A PAGE */
+
+    mobile3DMenu
+        .querySelectorAll("a")
+        .forEach(function(link){
+
+            link.addEventListener(
+                "click",
+                function(){
+
+                    mobileMenuBtn.classList.remove("active");
+
+                    mobile3DMenu.classList.remove("active");
+
+                }
+            );
+
+        });
+
+}
+</script>
+
+
+
+</body>
+
+</html>

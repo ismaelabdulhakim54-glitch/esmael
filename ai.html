@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ESMAEL AI | Digital Intelligence</title>
+
+    <meta
+        name="description"
+        content="ISMEX AI — intelligent digital creation, coding, websites, AI and more."
+    >
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #030407;
+        }
+
+        body {
+            font-family:
+                Inter,
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+
+        /* =====================================
+           MAIN PAGE
+        ===================================== */
+
+        .ai-page {
+
+            position: relative;
+
+            width: 100%;
+            height: 100vh;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 50% -10%,
+                    rgba(0, 180, 255, 0.12),
+                    transparent 38%
+                ),
+                radial-gradient(
+                    circle at 100% 100%,
+                    rgba(110, 40, 255, 0.08),
+                    transparent 35%
+                ),
+                #030407;
+        }
+
+
+        /* =====================================
+           HEADER
+        ===================================== */
+
+        .ai-header {
+
+            position: absolute;
+
+            top: 12px;
+            left: 14px;
+            right: 14px;
+
+            height: 54px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 14px;
+
+            border-radius: 17px;
+
+            background:
+                rgba(10, 13, 20, 0.72);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.08);
+
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, 0.25);
+
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            z-index: 100;
+        }
+
+
+        /* =====================================
+           BRAND
+        ===================================== */
+
+        .brand {
+
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+
+        .brand-logo {
+
+            width: 32px;
+            height: 32px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #00c8ff,
+                    #704cff
+                );
+
+            color: white;
+
+            font-size: 10px;
+            font-weight: 900;
+
+            box-shadow:
+                0 0 24px rgba(0, 190, 255, 0.22);
+        }
+
+
+        .brand-name {
+
+            color: white;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            letter-spacing: 0.4px;
+        }
+
+
+        .brand-subtitle {
+
+            margin-top: 2px;
+
+            color: #7f889b;
+
+            font-size: 8px;
+            letter-spacing: 0.3px;
+        }
+
+
+        /* =====================================
+           BACK BUTTON
+        ===================================== */
+
+        .back-button {
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 5px;
+
+            height: 32px;
+
+            padding: 0 12px;
+
+            border-radius: 10px;
+
+            color: #dce5f2;
+
+            text-decoration: none;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            background:
+                rgba(255, 255, 255, 0.045);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.08);
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease;
+        }
+
+
+        .back-button:hover {
+
+            transform: translateY(-1px);
+
+            background:
+                rgba(255, 255, 255, 0.09);
+        }
+
+
+        /* =====================================
+           AI FRAME
+        ===================================== */
+
+        .ai-container {
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            overflow: hidden;
+
+            padding-top: 76px;
+        }
+
+
+        .ai-frame {
+
+            width: 100%;
+            height: calc(100% - 4px);
+
+            display: block;
+
+            border: none;
+
+            background: #050507;
+        }
+
+
+        /* =====================================
+           LOADING
+        ===================================== */
+
+        .loading {
+
+            position: absolute;
+
+            inset: 0;
+
+            z-index: 50;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            flex-direction: column;
+
+            gap: 13px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(0, 190, 255, 0.08),
+                    #030407 55%
+                );
+
+            transition:
+                opacity 0.4s ease;
+        }
+
+
+        .loading.hidden {
+
+            opacity: 0;
+
+            pointer-events: none;
+        }
+
+
+        .loader {
+
+            width: 36px;
+            height: 36px;
+
+            border-radius: 50%;
+
+            border:
+                2px solid rgba(255,255,255,0.08);
+
+            border-top-color: #00c8ff;
+            border-right-color: #704cff;
+
+            animation:
+                spin 0.8s linear infinite;
+        }
+
+
+        @keyframes spin {
+
+            to {
+                transform: rotate(360deg);
+            }
+
+        }
+
+
+        .loading-text {
+
+            color: #7f899b;
+
+            font-size: 10px;
+
+            letter-spacing: 0.5px;
+        }
+
+
+        /* =====================================
+           MOBILE
+        ===================================== */
+
+        @media (max-width: 600px) {
+
+            .ai-header {
+
+                top: 8px;
+                left: 8px;
+                right: 8px;
+
+                height: 48px;
+
+                padding: 0 10px;
+
+                border-radius: 14px;
+            }
+
+
+            .brand-logo {
+
+                width: 29px;
+                height: 29px;
+
+                border-radius: 8px;
+
+                font-size: 9px;
+            }
+
+
+            .brand-name {
+
+                font-size: 12px;
+            }
+
+
+            .brand-subtitle {
+
+                font-size: 7px;
+            }
+
+
+            .back-button {
+
+                height: 29px;
+
+                padding: 0 9px;
+
+                font-size: 10px;
+            }
+
+
+            .ai-container {
+
+                padding-top: 64px;
+            }
+
+
+            .ai-frame {
+
+                height: calc(100% - 2px);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="ai-page">
+
+
+        <!-- =================================
+             WEBSITE AI HEADER
+        ================================= -->
+
+        <header class="ai-header">
+
+
+            <div class="brand">
+
+                <div class="brand-logo">
+                    ES
+                </div>
+
+
+                <div>
+
+                    <div class="brand-name">
+                        ESMAEL AI
+                    </div>
+
+                    <div class="brand-subtitle">
+                        DIGITAL INTELLIGENCE
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="index.html"
+                class="back-button"
+            >
+                ← Back
+            </a>
+
+        </header>
+
+
+
+        <!-- =================================
+             ISMEX AI
+        ================================= -->
+
+        <main class="ai-container">
+
+
+            <div
+                class="loading"
+                id="loading"
+            >
+
+                <div class="loader"></div>
+
+                <div class="loading-text">
+                    Initializing ESMAEL-AI...
+                </div>
+
+            </div>
+
+
+            <iframe
+                id="aiFrame"
+                class="ai-frame"
+                src="https://ismex-ai-eyk9x3.v2.appdeploy.ai/?embed=1&new=1"
+                title="ISMEX AI"
+                allow="
+                    microphone;
+                    camera;
+                    clipboard-read;
+                    clipboard-write
+                "
+                allowfullscreen
+            ></iframe>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <script>
+
+        const frame =
+            document.getElementById("aiFrame");
+
+        const loading =
+            document.getElementById("loading");
+
+
+        frame.addEventListener(
+            "load",
+            function () {
+
+                loading.classList.add("hidden");
+
+            }
+        );
+
+
+        setTimeout(
+            function () {
+
+                loading.classList.add("hidden");
+
+            },
+            8000
+        );
+
+    </script>
+
+
+</body>
+
+</html>
